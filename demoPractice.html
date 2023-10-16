@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        background-image: linear-gradient(pink, grey);
+        height: 33rem;
+        position: relative;
+      }
+      .container1 {
+        background-color: rgb(215, 209, 209);
+        /* text-align: center; */
+        /* padding-top: 5rem; */
+        width: 50rem;
+        margin-left: 10rem;
+        margin-top: 7rem;
+        position: absolute;
+        height: 21rem;
+        box-shadow: 3px 3px 3px 3px rgb(216, 186, 186);
+      }
+      h1 {
+        color: olive;
+      }
+      h2 {
+        color: rgb(94, 94, 24);
+      }
+      .smallcontain {
+        text-align: center;
+      }
+      .inputbox {
+        padding-bottom: 2rem;
+      }
+      .btns {
+        background-color: rgb(121, 187, 220);
+        border-width: 0;
+        padding: 1rem;
+        border-radius: 5px;
+        color: white;
+      }
+      .styl {
+        background-color: olive;
+        width: 10rem;
+        text-align: center;
+        /* padding-left: 20rem; */
+        margin-top: 2rem;
+        border-width: 0;
+        box-shadow: 3px;
+        padding: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="container1">
+        <div class="smallcontain">
+          <h1>Fahrenheit Conversion</h1>
+          <h2>Celsius to Fahrenheit</h2>
+          <div class="inputbox">
+            <input type="text" id="input" />
+          </div>
+          <div>
+            <button class="btns" id="btn" onclick="convert()">
+              Convert to Fahrenheit
+            </button>
+          </div>
+          <div>
+            <button id="result" class="styl"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="demoPractice.js"></script>
+  </body>
+</html>
