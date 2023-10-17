@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI Calculator</title>
+
+    <style>
+      .container {
+        background-image: linear-gradient(pink, grey);
+        height: 43rem;
+        position: relative;
+        background-size: cover;
+      }
+      .container1 {
+        background-color: rgb(85, 81, 81);
+        /* text-align: center; */
+        /* padding-top: 5rem; */
+        width: 50rem;
+        margin-left: 20rem;
+        margin-top: 7rem;
+        position: absolute;
+        height: 27rem;
+        box-shadow: 3px 3px 3px 3px rgb(216, 186, 186);
+      }
+      h1 {
+        color: rgb(212, 73, 119);
+      }
+      h2 {
+        color: rgb(212, 73, 119);
+      }
+      .smallcontain {
+        text-align: center;
+      }
+      .inputbox {
+        padding-bottom: 2rem;
+        display: flex;
+        text-align: center;
+        padding-left: 16rem;
+        gap: 1rem;
+      }
+      p {
+        color: rgb(218, 186, 186);
+      }
+      .btns {
+        /* background-color: rgb(49, 69, 79);
+        border-width: 0;
+        padding: 1rem;
+        border-radius: 5px;
+        color: white;
+        font-weight: bold; */
+        display: inline-block;
+        padding: 5px 5px;
+        font-size: 24px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+        background-color: #5dbae1;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 9px #999;
+        margin-left: 3rem;
+      }
+      .styl {
+        margin-left: 3rem;
+        background-color: palevioletred;
+        width: 5rem;
+        text-align: center;
+        /* padding-left: 20rem; */
+        margin-top: 2rem;
+        border-width: 0;
+        box-shadow: 3px 3px 3px 3px;
+        padding: 1rem;
+      }
+      button:hover {
+        cursor: pointer;
+        color: rgb(211, 35, 93);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="container1">
+        <div class="smallcontain">
+          <h1>Body Mass Index</h1>
+          <h2>Eat H ealth,Live Health</h2>
+          <div class="inputbox">
+            <p>Mass Value</p>
+            <input type="text" id="input" />
+          </div>
+          <div class="inputbox">
+            <p>Height Value</p>
+            <input type="text" id="inputs" />
+          </div>
+          <div>
+            <button class="btns" id="btn" onclick="convert()">Check BMI</button>
+          </div>
+          <div>
+            <button id="result" class="styl"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="demoPractice.js"></script>
+  </body>
+</html>
