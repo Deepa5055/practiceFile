@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tenure Calculator</title>
+    <script>
+      function calculateTenure() {
+        // Get input values
+        var principal = parseFloat(document.getElementById("principal").value);
+        var interestRate = parseFloat(
+          document.getElementById("interestRate").value
+        );
+        var maturityAmount = parseFloat(
+          document.getElementById("maturityAmount").value
+        );
+
+        // Calculate tenure in months
+        var monthlyInterestRate = interestRate / 100 / 12;
+        var tenure =
+          Math.log(maturityAmount / principal) /
+          Math.log(1 + monthlyInterestRate);
+
+        // Display result
+        document.getElementById("tenureMonths").innerHTML =
+          "Tenure (months): " + tenure.toFixed(2);
+      }
+    </script>
+
+    <style>
+      body {
+        background-color: rgb(31, 75, 75);
+        margin-left: 5rem;
+      }
+      .container {
+        height: 33rem;
+        position: relative;
+      }
+      .container1 {
+        background-image: linear-gradient(to right, teal, pink);
+        /* text-align: center; */
+        /* padding-top: 5rem; */
+
+        width: 40rem;
+        border-radius: 1rem;
+        margin-left: 21rem;
+        margin-top: 5rem;
+        position: absolute;
+        height: 35rem;
+        box-shadow: 3px 3px 3px 3px rgb(216, 186, 186);
+        /* margin-bottom: 7rem; */
+      }
+      h1 {
+        color: white;
+        font-size: 3rem;
+        font-weight: 500;
+      }
+      h2 {
+        color: rgb(110, 110, 103);
+        /* font-size: 5rem;
+  font-weight: 500; */
+      }
+      .smallcontain {
+        text-align: center;
+      }
+      .inputbox {
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+      }
+      .btns {
+        background-color: rgb(90, 92, 92);
+        border-width: 0;
+        padding: 1rem;
+        border-radius: 5px;
+        color: white;
+      }
+      .styl {
+        /* background-color: olive; */
+        /* width: 10rem; */
+        text-align: center;
+        /* padding-left: 20rem; */
+        margin-top: 2rem;
+        border-width: 0;
+        box-shadow: 3px;
+        padding: 1rem;
+        margin-left: 4rem;
+        color: rgb(9, 166, 223);
+        font-size: 20px;
+        font-weight: 500;
+        font-size: 30px;
+      }
+      .invalue {
+        padding: 5px;
+      }
+      button:hover {
+        color: rgb(5, 5, 93);
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="container1">
+        <div class="smallcontain">
+          <h1>FD Calculator</h1>
+          <form>
+            <label for="principal">Principal Amount:</label>
+            <div class="inputbox">
+              <input
+                type="number"
+                id="principal"
+                required
+                class="invalue"
+              /><br /><br />
+            </div>
+
+            <label for="interestRate">Interest Rate (% per annum):</label>
+            <div class="inputbox">
+              <input
+                type="number"
+                id="interestRate"
+                required
+                class="invalue"
+              /><br /><br />
+            </div>
+
+            <label for="maturityAmount">Maturity Amount:</label>
+            <div class="inputbox">
+              <input
+                type="number"
+                id="maturityAmount"
+                class="invalue"
+              /><br /><br />
+            </div>
+
+            <button type="button" class="btns" onclick="calculateTenure()">
+              Calculate Tenure
+            </button>
+          </form>
+
+          <p id="tenureMonths"></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
