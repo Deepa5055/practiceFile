@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Counter</title>
+    <style>
+      body {
+        text-align: center;
+      }
+      textarea {
+        height: 10rem;
+        width: 20rem;
+        background-color: pink;
+        color: rgb(209, 18, 155);
+        border-radius: 2rem;
+        padding: 3rem;
+        font-weight: 500;
+        font-size: 1rem;
+      }
+      .container {
+        margin-top: 5rem;
+        background-color: rgb(44, 109, 109);
+        width: 50rem;
+        margin-left: 18rem;
+        padding: 4rem;
+      }
+      h1 {
+        color: white;
+        font-size: 40px;
+      }
+      p {
+        color: rgb(237, 231, 233);
+        font-size: 20px;
+        font-weight: 500;
+      }
+      span {
+        color: rgb(70, 1, 43);
+        font-size: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- <label for="inputText">Enter Text:</label> -->
+      <h1>Text Counter</h1>
+      <textarea
+        id="inputText"
+        rows="4"
+        cols="50"
+        placeholder="Type a text..."
+      ></textarea>
+      <p>The Characters you were entered : <span id="charCount">0</span></p>
+    </div>
+
+    <script>
+      const inputText = document.getElementById("inputText");
+      const charCount = document.getElementById("charCount");
+
+      inputText.addEventListener("input", function () {
+        const text = inputText.value;
+        const count = text.length;
+        charCount.textContent = count;
+      });
+    </script>
+  </body>
+</html>

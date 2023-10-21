@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Time Difference Calculator</title>
+    <script>
+      function calculateTimeDifference() {
+        // Get input values for the start and end times
+        var startTime = document.getElementById("startTime").value;
+        var endTime = document.getElementById("endTime").value;
+
+        // Split the input strings to get hours and minutes
+        var startHours = parseInt(startTime.split(":")[0]);
+        var startMinutes = parseInt(startTime.split(":")[1]);
+        var endHours = parseInt(endTime.split(":")[0]);
+        var endMinutes = parseInt(endTime.split(":")[1]);
+
+        // Calculate the time difference in hours and minutes
+        var timeDifferenceHours = endHours - startHours;
+        var timeDifferenceMinutes = endMinutes - startMinutes;
+
+        // Normalize the time difference (e.g., if end time is earlier than start time)
+        if (timeDifferenceMinutes < 0) {
+          timeDifferenceHours--;
+          timeDifferenceMinutes += 60;
+        }
+
+        // Display the result
+        document.getElementById("result").innerHTML =
+          "Time Difference: " +
+          timeDifferenceHours +
+          " hours and " +
+          timeDifferenceMinutes +
+          " minutes";
+      }
+    </script>
+    <style>
+      .times {
+        width: 50rem;
+        padding: 10px;
+      }
+      .container {
+        background-image: linear-gradient(to right, teal, pink);
+        padding: 3rem;
+        text-align: center;
+        width: 50rem;
+        margin-left: 20rem;
+        margin-top: 5rem;
+      }
+      button {
+        margin-top: 1rem;
+        background-color: gray;
+        padding: 1rem;
+        border-radius: 1rem;
+        border-width: 0;
+        color: white;
+      }
+      h1 {
+        color: white;
+      }
+      button:hover {
+        color: rgb(5, 5, 93);
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Time Difference Calculator</h1>
+      <form>
+        <label for="startTime">Start Time:</label>
+        <input type="time" id="startTime" required class="times" /><br /><br />
+
+        <label for="endTime">End Time:</label>
+        <input type="time" id="endTime" required class="times" /><br /><br />
+
+        <button type="button" onclick="calculateTimeDifference()">
+          Calculate Time Difference
+        </button>
+      </form>
+
+      <p id="result"></p>
+    </div>
+  </body>
+</html>

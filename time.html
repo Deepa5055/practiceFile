@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Time Calculation</title>
+    <style>
+      .times {
+        width: 50rem;
+        padding: 10px;
+      }
+      .container {
+        background-image: linear-gradient(to right, teal, pink);
+        padding: 3rem;
+        text-align: center;
+        width: 50rem;
+        margin-left: 20rem;
+        margin-top: 5rem;
+      }
+      button {
+        margin-top: 1rem;
+        background-color: gray;
+        padding: 1rem;
+        border-radius: 1rem;
+        border-width: 0;
+      }
+      h1 {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Time Calculation</h1>
+      <p>Start Time :</p>
+      <div>
+        <input type="time" class="times" id="starttime" />
+      </div>
+      <p>End Time:</p>
+      <div>
+        <input type="time" class="times" id="endtime" />
+      </div>
+      <button onclick="time()">Calculate</button>
+      <div>
+        <p id="result">Time Difference:</p>
+      </div>
+    </div>
+
+    <script src="time.js"></script>
+  </body>
+</html>

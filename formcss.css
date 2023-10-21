@@ -1,0 +1,53 @@
+body {
+  background-color: linear-gradient(pink, yellow);
+}
+
+#form {
+  width: 400px;
+  margin: 12vh auto 0 auto;
+  background-image: linear-gradient(to right, teal, pink);
+  border-radius: 5px;
+  padding: 30px;
+  border-radius: 1rem;
+}
+h1 {
+  text-align: center;
+  color: white;
+}
+#form button {
+  background-color: rgb(103, 102, 104);
+  color: white;
+  cursor: pointer;
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 1rem;
+}
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+.input-group input {
+  border-radius: 5px;
+  font-size: 15px;
+  margin-top: 5px;
+  padding: 10px;
+}
+button:hover {
+  color: rgb(5, 5, 93);
+  font-size: 20px;
+}
+
+.input-group input:focus {
+  outline: 0;
+}
+.input-group .error {
+  color: red;
+  margin-top: 5px;
+}
+.input-group .success input {
+  border-color: green;
+}
+.input-group .error input {
+  border-color: red;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RD calculator</title>
+    <style>
+      div {
+        margin-top: 1em;
+        margin-bottom: 1em;
+      }
+      .inputs {
+        width: 28rem;
+        padding: 10px;
+      }
+      .container {
+        margin-left: 25rem;
+        margin-top: 5rem;
+        /* border-color: aqua; */
+        /* border-style: solid; */
+        width: 30rem;
+        padding: 2rem;
+        box-shadow: 2px 2px 3px 3px rgb(98, 96, 96);
+        border-width: 1px;
+        background-image: linear-gradient(to right, teal, pink);
+        border-radius: 1rem;
+      }
+      h1 {
+        text-align: center;
+        color: white;
+      }
+      button {
+        background-color: grey;
+        padding: 1rem;
+        border-width: 0;
+        border-radius: 1rem;
+      }
+      .ans {
+        color: rgb(13, 105, 105);
+        font-size: 30px;
+      }
+      button:hover {
+        color: rgb(5, 5, 93);
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>RD calculator</h1>
+      <form>
+        <label>Principal Amount(RS):</label>
+        <div>
+          <input
+            type="text"
+            placeholder="Enter the Principal amount"
+            class="inputs"
+            id="input1"
+          />
+        </div>
+        <label>Interest Rate(%):</label>
+        <div>
+          <input
+            type="text"
+            placeholder="Enter the annual interest rate"
+            class="inputs"
+            id="input2"
+          />
+        </div>
+        <label>Time(Months):</label>
+        <div>
+          <input
+            type="text"
+            placeholder="Enter the number of months"
+            class="inputs"
+            id="input3"
+          />
+        </div>
+        <div>
+          <button onclick="calculator()">Calculate</button>
+        </div>
+        <div id="result" class="ans"></div>
+      </form>
+    </div>
+    <script src="Rd.js"></script>
+  </body>
+</html>
