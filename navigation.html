@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navigation</title>
+    <style>
+      .container {
+        background-color: pink;
+        height: 5rem;
+        /* justify-content: space-evenly; */
+        display: flex;
+      }
+      .subcontent {
+        /* text-align: center; */
+        color: rgb(147, 69, 69);
+        padding-top: 2rem;
+        padding-left: 8rem;
+      }
+      .delivaredmeals {
+  display: flex;
+  margin-top: 8rem;
+  align-items: center;
+}
+.flex{
+  display: flex;
+  gap: 5rem;
+  padding-top: 0rem;
+  /* background-color: rgb(247, 190, 190); */
+}
+.delivaredimg {
+  display: flex;
+}
+.delivaredimg img {
+  height: 4.8rem;
+  width: 4.8rem;
+  border-radius: 50%;
+  margin-right: -1.6rem;
+  border: 3px solid #fff;
+}
+      .navlink {
+        list-style: none;
+        display: flex;
+        justify-content: space-evenly;
+        padding-bottom: 3rem;
+        padding-top: 0;
+        margin-left: 34rem;
+        margin-bottom: 3rem;
+        padding-top: 1rem;
+        padding-left: 4rem;
+        font-weight: bold;
+      }
+      li:hover {
+        background-color: teal;
+        border-radius: 2rem;
+        text-align: center;
+        /* width: 1rem; */
+        padding-left: 1rem;
+      }
+      li {
+        padding-left: 4rem;
+        color: white;
+      }
+      .logo {
+        height: 5rem;
+        padding-bottom: 12rem;
+      }
+      .menubtn {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        width: 40px;
+        cursor: pointer;
+        display: none;
+      }
+      .ul1 {
+        /* background-color: teal;
+        width: 6rem;
+        height: 6rem; */
+        display: none;
+      }
+      /* .content {
+        background-color: #1d6b6bd6;
+        height: 40rem;
+        width: 41.5rem;
+        display: none;
+      } */
+.img{
+  padding-top: 3rem;
+  height: 24rem;
+  width: 24rem;
+ 
+}
+.popara{
+  color: rgb(99, 42, 42);
+  padding-left: 40rem;
+  /* background-color: teal;
+  width: 2rem;
+  margin-left: 10rem; */
+  display: none;
+}
+button:hover{
+  font-size: 1rem;
+}
+button{
+  background-color: rgb(156, 96, 96);
+  border-width: 0;
+  padding: 1rem;
+  color: white;
+  border-radius: 1rem;
+  margin-top: 3rem;
+  cursor: pointer;
+}    
+h1 {
+        display: block;
+      }
+      .para {
+        display:block;
+        color: rgb(87, 15, 15);
+        
+      }
+     
+      @media only screen and (max-width: 850px) {
+        * {
+          margin: 0;
+          padding: 0;
+        }
+        .menubtn {
+          display: block;
+        }
+        .popara{
+  color: rgb(99, 42, 42);
+  padding-left: 40rem;
+  /* background-color: teal;
+  width: 2rem;
+  margin-left: 10rem; */
+  display: none;
+}
+        button{
+  background-color: rgb(156, 96, 96);
+  border-width: 0;
+  padding: 1rem;
+  color: white;
+  border-radius: 1rem;
+  margin-top: 3rem;
+  cursor: pointer;
+  display: none;
+}    
+.popara{
+        display: none;
+      }
+      .ul1 {
+        /* background-color: rgb(9, 82, 82); */
+        width:2rem;
+        /* height: 6rem; */
+        display: none;
+        padding-top: 10%;
+        /* text-align: center; */
+        list-style: none;
+        color: white;
+        font-size: 1rem;
+        font-weight: bold;
+        /* padding: 1rem; */
+      }
+
+      .navlink {
+        list-style: none;
+        /* display: flex; */
+        color: white;
+        /* display: none; */
+      }
+
+      .logo {
+        height: 5em;
+        padding-bottom: 12rem;
+        width: 5rem;
+      }
+      .menubtn {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        width: 40px;
+        cursor: pointer;
+        /* display: none; */
+      }
+      .lii {
+        padding-bottom: 3rem;
+      }
+       .content {
+        background-color: #1d6b6bd6;
+        height: 40rem;
+        width: 23.5rem;
+        display: block;
+      } 
+      h1 {
+        display: none;
+      }
+      .para {
+        display:none;
+        color: rgb(49, 21, 21);
+        
+      }
+      .img{
+  padding-top: 3rem;
+  display: none;
+ 
+}
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container" id="contain">
+      <img src="./coffee.png" class="logo" />
+      <nav id="navs">
+        <ul class="navlink" id="unorder">
+          <li id="item" onmouseover="displaypop()">Home</li>
+          <li>About US</li>
+          <li>Services</li>
+          <li>Contact</li>
+          <li>Feedback</li>
+        </ul>
+        <!-- <p class="popara"id=pop>Know More</p> -->
+        <ul class="ul1" id="smallul">
+          <li class="lii">Home</li>
+          <li class="lii">About US</li>
+          <li class="lii">Sevices</li>
+          <li class="lii">Contact</li>
+          <li class="lii">Feedback</li>
+        </ul>
+      </nav>
+      <img
+        src="https://cdn-icons-png.flaticon.com/128/1828/1828551.png"
+        class="menubtn"
+        id="btn"
+        onmouseover="display()"
+        onclick="displays()"
+      />
+    </div>
+    <div class="content"></div>
+    <div class="flex">
+    <div class="subcontent">
+      <h1>Make a Day with coffee</h1>
+      <p class="para">
+        Coffee is a beverage prepared from roasted coffee beans.<br> Darkly colored,
+        bitter, and slightly acidic, coffee has a stimulating effect on humans,
+        ...
+      </p>
+      <button>Learn More</button>
+      </div>
+    
+   
+    <div>
+    <img src="./coffee.png"class="img"/>
+  </div>
+    <script>
+     
+      function display() {
+        smallul.style.display = "none ";
+        smallul.style.marginLeft = "rem";
+        smallul.style.width = "25rem";
+      }
+      function displays() {
+        smallul.style.display = "block ";
+        smallul.style.marginLeft = "rem";
+        smallul.style.width = "25em";
+      }
+      function displaypop(){
+        pop.style.display="block"
+      }
+    </script>
+  </body>
+</html>
